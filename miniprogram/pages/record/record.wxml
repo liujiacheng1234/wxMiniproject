@@ -1,0 +1,25 @@
+<!--pages/record/record.wxml-->
+<view class="section">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{ObjectArr}}">
+        <view class="picker">
+            当前选择：{{array[index].name}}
+        </view>
+    </picker>
+</view>
+
+<view class="add">
+    <view class="addKeTi" bindtap="addKeTi">
+        增加课题
+    </view>
+    <view class="addRecord" bindtap="addRecord" data-id="{{array[index]._id}}">
+        增加记录
+    </view>
+</view>
+
+<view wx:for="{{list}}" wx:key="_id" style="justify-content: space-evenly; display: flex;">
+    <navigator hover-class="hcls" url="/pages/recordDetail/recordDetail?id={{item._id}}" class="shuju">
+        <view>样品名字：{{item.name}}</view>
+        <view>备注：{{item.note}}</view>
+        <view>更新时间：{{item.time}}</view>
+    </navigator>
+</view>

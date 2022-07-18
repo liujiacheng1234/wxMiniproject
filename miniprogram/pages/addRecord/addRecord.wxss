@@ -1,0 +1,9 @@
+/* pages/addRecord/addRecord.wxss */
+input{
+    border: 1px solid gray;
+    height: 35px;
+}
+.note{
+    border: 1px solid gray;
+    height: 100px;
+}

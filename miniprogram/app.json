@@ -1,5 +1,12 @@
 {
   "pages": [
+    "pages/record/record",
+    "pages/addKeTi/addKeTi",
+    "pages/addRecord/addRecord",
+    "pages/recordDetail/recordDetail",
+
+
+
     "pages/index/index",
     "pages/getOpenId/index",
     "pages/getMiniProgramCode/index",

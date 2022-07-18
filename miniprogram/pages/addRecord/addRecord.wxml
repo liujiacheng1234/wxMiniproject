@@ -1,0 +1,8 @@
+<!--pages/addRecord/addRecord.wxml-->
+<view>请输入样品名字</view>
+<input bindinput="getName"></input>  
+
+<view>请输入备注</view>
+<input bindinput="getNote" class="note"></input>  
+
+<button type="primary" bindtap="commit">提交</button>

@@ -1,0 +1,5 @@
+<!--pages/addKeTi/addKeTi.wxml-->
+<view>请输入课题名字</view>
+<input bindinput="getName"></input>  
+
+<button type="primary" bindtap="commit">提交</button>
