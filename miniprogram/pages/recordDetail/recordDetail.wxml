@@ -1,7 +1,20 @@
 <!--pages/recordDetail/recordDetail.wxml-->
-<text>pages/recordDetail/recordDetail.wxml</text>
-<text>样品名字：{{list.name}}</text>
-<text>备注：{{list.note}}</text>
-<text>更新时间：{{list.time}}</text>
+<view>
+    <view>样品名字：</view>
+    <input bindinput="bindInputName" value="{{list.name}}" type="text"></input>
+</view>
+
+<view>
+    <view>备注：</view>
+    <input bindinput="bindInputNote" value="{{list.note}}" type="text"></input>
+</view>
+
+<view>
+    <view>更新时间：</view>
+    <view>{{list.time}}</view>
+</view>
+
+<button type="primary" bindtap="upData">更新数据</button>
+<button bindtap="delData">删除数据</button>
 
 

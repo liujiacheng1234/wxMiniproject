@@ -14,6 +14,9 @@
     <view class="addRecord" bindtap="addRecord" data-id="{{array[index]._id}}">
         增加记录
     </view>
+    <view class="delKeTi" bindtap="delKeTi">
+        删除课题
+    </view>
 </view>
 
 <view wx:for="{{list}}" wx:key="_id" style="justify-content: space-evenly; display: flex;">

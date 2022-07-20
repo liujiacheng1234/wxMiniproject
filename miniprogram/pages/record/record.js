@@ -106,7 +106,59 @@ Page({
             console.log('请求失败',err)
         })
     },
+    //删除课题
+    delKeTi(){
+        //课题数组id=====keArr[keIndex]._id
+        let that = this
+        wx.showModal({
+            title: '提示',
+            content: '删除后数据将丢失',
+            success(res) {
+                if (res.confirm) {
+                    console.log('用户点击确定'),
+                    that.keTiDel()
+                    that.onShow()
+                } else if (res.cancel) {
+                    console.log('用户点击取消')
+                }
+            }
+        })
+    },
+    keTiDel(){
+        wx.cloud.database().collection('keti').doc(keArr[keIndex]._id)
+        .remove().then(res => {
+            console.log('删除成功')
+            this.setData({
+                list: []
+            })
+            this.delRecord()
+            wx.showToast({
+                title: '删除成功',
+                icon: 'success',
+            })
 
+        }).catch(err => {
+            console.log('删除失败',err)//失败提示错误信息
+        })
+    },
+    delRecord(){
+        wx.cloud.database().collection('record')
+        .where({
+            contact_keti : keArr[keIndex]._id
+        })
+        .remove().then(res => {
+            console.log('删除成功')
+            this.setData({
+                list: []
+            })
+            wx.showToast({
+                title: '删除成功',
+                icon: 'success',
+            })
+        }).catch(err => {
+            console.log('删除失败',err)//失败提示错误信息
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
