@@ -1,20 +1,22 @@
 <!--pages/recordDetail/recordDetail.wxml-->
-<view>
-    <view>样品名字：</view>
-    <input bindinput="bindInputName" value="{{list.name}}" type="text"></input>
-</view>
+<view class="big_box">
+    <view class="top_out_box">
+        <view class="top_in_name">样品名字：</view>
+        <textarea bindinput="bindInputName" value="{{list.name}}" class="top_in_input" maxlength="30"></textarea>
+    </view>
 
-<view>
-    <view>备注：</view>
-    <input bindinput="bindInputNote" value="{{list.note}}" type="text"></input>
-</view>
+    <view class="out_box">
+        <view class="top_in_name">备注：</view>
+        <textarea bindinput="bindInputNote" value="{{list.note}}" type="text" class="top_in_input"></textarea>
+    </view>
 
-<view>
-    <view>更新时间：</view>
-    <view>{{list.time}}</view>
+    <view>
+        <view>更新时间：</view>
+        <view>{{list.time}}</view>
+    </view>
+
+
 </view>
 
 <button type="primary" bindtap="upData">更新数据</button>
 <button bindtap="delData">删除数据</button>
-
-

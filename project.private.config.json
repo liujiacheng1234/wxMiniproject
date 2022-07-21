@@ -51,6 +51,13 @@
                     "pathName": "pages/updateRecordSuccess/index",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/recordDetail/recordDetail",
+                    "query": "id=0a4ec1f962d7ee59114c7d091b007b96",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }
